@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Movie</title>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-4.3.1-dist/css/bootstrap.css">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-4.3.1-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
 </head>
 <body>
-    <center>
-        <header id="header">
-            <div id="classTitle">
-                <p>Movie Factory</p> 
-            </div>
-            <div>              
-                <nav class="navbar">
+	<center>
+		<header id="header" class="">
+			<div id="headTitle">
+				<p>Movie Factory</p> 
+			</div>
+			 <nav class="navbar">
                      <a class="navbar-brand text-light" href="#">Home</a>
-                </nav> 
-            </div>                                    
-        </header><!-- /header -->
-        <main>   
-            <div class="mt-5 divcontainerTitle">
-               <div>
-                   
-               </div>
-               <div id="divTitle">
-                   Movies
-               </div>
-               <div id="divSort" >
-                   <p onclick="DoSort()">&#x25BC; Sort</p>
-               </div>
-                        
-            </div>            
-            <div id="divcontainer" class="row mt-5 container">                
-            </div>
-        </main>
-        <footer>
-                <div id="classFooter">
-                   <p>Movie Factory</p>  
-                </div>
-        </footer>
-    </center>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+             </nav> 
+			
+		</header><!-- /header -->
+		<main>
+			<div id="divMain">
+			
+				<div class="divcontainerTitle">
+					<div>
+	                   
+	               </div>
+	               <div id="divTitle">
+	                   Movies
+	               </div>
+	               <div id="divSort" >
+	                   <p id="sortP" onclick="DoSort()">&#x25BC; Sort</p>
+	               </div>
+					
+				</div>
+				 <div id="divcontainer" class="row mt-5 container">                
+           		 </div>
+			</div>			
+		</main>
+		<footer>
+			<div id="footTitle">
+				<p>Movie Factory</p> 
+			</div>
+		</footer>
+	</center>
+	 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/movies-json.js" type="text/javascript" charset="utf-8" async defer></script>
     <script src="js/myscript.js" type="text/javascript" charset="utf-8" async defer></script>
+	
 </body>
 </html>

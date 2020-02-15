@@ -10,11 +10,26 @@ function AddLike(id) {
     
 }
 function DoSort() {
+    //&#x25B2; and &#x25BC; 
+    console.log($("#sortP").text());
+    var sorttext = $("#sortP").text();
+    var SortType = "";
+    if (sorttext == "▼ Sort"){
+        SortType = "asce";
+        $("#sortP").text( "▲ Sort" );
 
+    }else{
+        $("#sortP").text( "▼ Sort" );
+        SortType = "desc";
+
+    }
+    console.log(SortType);
+    //$("#sortP").text();
+     
     var arr = [];
     //get id and likes
    $('.numLike').each(function(){
-        console.log($(this).attr("id"));
+       // console.log($(this).attr("id"));
         arr.push([$(this).attr("id"),$(this).text()]); 
              
    })
@@ -24,19 +39,35 @@ function DoSort() {
     })
     var index, entry;
     var newArr= [];
-    for (index = 0; index < arr.length; ++index) {
-        entry = arr[index];
-         $.each(obj,function (i,item) {
-            if(entry[0]== item.id){
-                //keep last number
-                item.Like = entry[1];
-                newArr.push(item);
-            }
-        })
+    // sort ascending
+    if(SortType == "desc"){
+        for (index = 0; index < arr.length; ++index) {
+            entry = arr[index];
+             $.each(obj,function (i,item) {
+                if(entry[0]== item.id){
+                    //keep last number
+                    item.Like = entry[1];
+                    newArr.push(item);
+                }
+            })
+         }
+    }else{
+        for (index = arr.length; index > 0; --index) {
+            entry = arr[index-1];
+             $.each(obj,function (i,item) {
+                if(entry[0]== item.id){
+                    //keep last number
+                    item.Like = entry[1];
+                    newArr.push(item);
+                }
+            })
+         }
+    }
+        // sort descending
 
         //Create container again
         CreateContainer(newArr);
-    }
+    
 }
 function CreateContainer(obj) {
     $('#divcontainer').html("");
